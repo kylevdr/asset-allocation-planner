@@ -1,0 +1,38 @@
+{
+  "name": "asset-allocation-planner",
+  "version": "1.0.0",
+  "description": "Web application that plans ideal allocation of assets based on risk profile",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --watch --config webpack.config.dev.js",
+    "build": "webpack --progress --profile --colors --config webpack.config.build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylevdr/asset-allocation-planner.git"
+  },
+  "author": "Kyle VanDeRiet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kylevdr/asset-allocation-planner/issues"
+  },
+  "homepage": "https://github.com/kylevdr/asset-allocation-planner#readme",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.26.2",
+    "extract-text-webpack-plugin": "^2.0.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.2",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0"
+  }
+}
