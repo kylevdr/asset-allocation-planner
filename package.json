@@ -2,7 +2,7 @@
   "name": "asset-allocation-planner",
   "version": "1.0.0",
   "description": "Web application that plans ideal allocation of assets based on risk profile",
-  "main": "webpack.config.js",
+  "main": "dist/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --watch --config webpack.config.dev.js",
