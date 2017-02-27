@@ -1,5 +1,6 @@
 # Asset Allocation Planner
-Web application that plans ideal allocation of assets based on risk profile.
+Web application that calculates and charts ideal allocation of assets based on risk profile.  
+Video demonstration is available here: https://youtu.be/gql6ChWvhLY.
 
 ### Dependencies
 - React
