@@ -1,3 +1,7 @@
+body {
+	background-color: #0b86c3;
+}
+
 .h-center {
 	margin: 0 auto;
 	float: none;
@@ -7,4 +11,10 @@
 .slider {
 	display: block;
 	margin: auto;
+}
+
+.main-content {
+	min-height: 90vh;
+	top: calc(100vh / 2);
+ 	transform: translate(0, -50%);
 }

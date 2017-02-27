@@ -17,7 +17,7 @@ export default class Chart extends React.Component {
         );
     }
 
-    componentWillUpdate() {
+    componentDidUpdate() {
         // Re-render chart when risk profile changes.
         this.chart = new Highcharts[this.props.type || "Chart"](
             this.props.container, 
