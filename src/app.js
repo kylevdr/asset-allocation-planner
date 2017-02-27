@@ -4,15 +4,15 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 import rootReducer from './reducers/index';
-import Title from './components/Title';
+import Main from './components/Main';
 
 const store = createStore(rootReducer);
 
 class App extends React.Component {
 	render() {
 		return (
-			// To extend the application, routing could be added here.
-			<Title></Title>
+			// To expand the application, routing could be added here.
+			<Main></Main>
 		);
 	}
 }

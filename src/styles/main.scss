@@ -1,4 +1,11 @@
-body {
-	background: grey;
-	color: white;
+.h-center {
+	margin: 0 auto;
+	float: none;
+}
+
+
+// Overwrite react-bootstrap-slider styling so slider can be centered
+.slider {
+	display: block;
+	margin: auto;
 }

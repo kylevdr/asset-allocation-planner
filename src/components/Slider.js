@@ -1,17 +1,25 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import ReactBootstrapSlider from 'react-bootstrap-slider';
 
-import { title } from '../text/text';
 import * as userInfoActions from '../actions/userInfo';
 
-class Title extends React.Component {
+class Slider extends React.Component {
+
+	handleSliderChange(e) {
+		this.props.actions.setRiskProfile(e.target.value);
+	}
+
 	render() {
 		return (
-			<div>
-				<h1>{title}</h1>
-				<p>{this.props.userInfo.riskProfile}</p>
-			</div>
+			<ReactBootstrapSlider className="slider-custom"
+				change={this.handleSliderChange.bind(this)}
+				value={this.props.userInfo.riskProfile}
+				step={1}
+				max={10}
+				min={1}
+			/>
 		);
 	}
 }
@@ -31,4 +39,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Title);
+)(Slider);
