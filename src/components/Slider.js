@@ -6,7 +6,6 @@ import ReactBootstrapSlider from 'react-bootstrap-slider';
 import * as userInfoActions from '../actions/userInfo';
 
 class Slider extends React.Component {
-
 	handleSliderChange(e) {
 		this.props.actions.setRiskProfile(e.target.value);
 	}
@@ -14,7 +13,7 @@ class Slider extends React.Component {
 	render() {
 		return (
 			<ReactBootstrapSlider className="slider-custom"
-				change={this.handleSliderChange.bind(this)}
+				slideStop={this.handleSliderChange.bind(this)}
 				value={this.props.userInfo.riskProfile}
 				step={1}
 				max={10}
