@@ -2,11 +2,12 @@
   "name": "asset-allocation-planner",
   "version": "1.0.0",
   "description": "Web application that plans ideal allocation of assets based on risk profile",
-  "main": "webpack.config.js",
+  "main": "dist/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --watch --config webpack.config.dev.js",
-    "build": "webpack --progress --profile --colors --config webpack.config.build.js"
+    "build": "webpack --progress --profile --colors --config webpack.config.build.js",
+    "serve": "live-server dist/"
   },
   "repository": {
     "type": "git",
@@ -25,12 +26,15 @@
     "babel-preset-react": "^6.23.0",
     "css-loader": "^0.26.2",
     "extract-text-webpack-plugin": "^2.0.0",
+    "live-server": "^1.2.0",
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.2",
     "webpack": "^2.2.1"
   },
   "dependencies": {
+    "highcharts": "^5.0.7",
     "react": "^15.4.2",
+    "react-bootstrap-slider": "^1.1.4",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0"
