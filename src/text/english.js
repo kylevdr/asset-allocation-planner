@@ -8,5 +8,11 @@ module.exports = {
 	midSmallCap: "Mid/Small Cap Stocks",
 	international: "International Stocks",
 	bonds: "Bonds",
-	cash: "Cash"
+	cash: "Cash",
+	formTitle: "Enter your current allocation of assets in dollars:",
+	currency: "$",
+	conservative: "Conservative",
+	aggressive: "Aggressive",
+	nextSteps: "Next Steps",
+	nextStepsSub: "To reach your ideal allocation of assets, make the following transactions:"
 };
