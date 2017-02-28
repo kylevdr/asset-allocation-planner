@@ -15,7 +15,7 @@ class AllocationForm extends React.Component {
 	render() {
 		return (
 			<div>
-				<p className="text-center">{text.formTitle}</p>
+				<h4 className="text-center form-title">{text.formTitle}</h4>
 				<form>
 					<div className="form-group">
 						<label htmlFor="largeCap">{text.largeCap}</label>

@@ -9,10 +9,15 @@ module.exports = {
 	international: "International Stocks",
 	bonds: "Bonds",
 	cash: "Cash",
-	formTitle: "Enter your current allocation of assets in dollars:",
+	formTitle: "Current Asset Allocation (Dollars)",
 	currency: "$",
 	conservative: "Conservative",
 	aggressive: "Aggressive",
 	nextSteps: "Next Steps",
-	nextStepsSub: "To reach your ideal allocation of assets, make the following transactions:"
+	nextStepsSub: "To reach ideal allocation of assets, make the following transactions:",
+	move: "Move",
+	from: "from",
+	to: "to",
+	nextStepsInstructions: "Enter your current allocation of assets in the field above.",
+	noStepsText: "You have already achieved ideal allocation of assets. You do not need to take any additional steps."
 };

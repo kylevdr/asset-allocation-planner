@@ -1,6 +1,6 @@
-export function calculateMoves(value) {
+export function calculateMoves(userInfo, assetAllocation) {
 	return {
 		type: 'CALCULATE_MOVES',
-		payload: value
+		payload: {userInfo, assetAllocation}
 	};
 }

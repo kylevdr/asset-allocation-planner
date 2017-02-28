@@ -10,7 +10,7 @@ body {
 	float: none;
 }
 
-// Overwrite react-bootstrap-slider styling so slider can be centered
+// Overwrite react-bootstrap-slider styling
 .slider {
 	display: block;
 	margin: auto;
@@ -18,5 +18,9 @@ body {
 
 .main-content {
 	min-height: 90vh;
-	top: 40px;
+	top: 30px;
+}
+
+.form-title {
+	margin-bottom: 15px;
 }
