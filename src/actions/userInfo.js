@@ -4,3 +4,13 @@ export function setRiskProfile(value) {
 		payload: value
 	};
 }
+
+export function setCurrentAllocation(name, value) {
+	return {
+		type: 'SET_CURRENT_ALLOCATION',
+		payload: {
+			key: name,
+			value: Number(value)
+		}
+	};
+}

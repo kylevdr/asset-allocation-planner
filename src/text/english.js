@@ -8,5 +8,16 @@ module.exports = {
 	midSmallCap: "Mid/Small Cap Stocks",
 	international: "International Stocks",
 	bonds: "Bonds",
-	cash: "Cash"
+	cash: "Cash",
+	formTitle: "Current Asset Allocation (Dollars)",
+	currency: "$",
+	conservative: "Conservative",
+	aggressive: "Aggressive",
+	nextSteps: "Next Steps",
+	nextStepsSub: "To reach ideal allocation of assets, make the following transactions:",
+	move: "Move",
+	from: "from",
+	to: "to",
+	nextStepsInstructions: "Enter your current allocation of assets in the field above.",
+	noStepsText: "You have already achieved ideal allocation of assets. You do not need to take any additional steps."
 };

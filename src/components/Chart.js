@@ -17,8 +17,8 @@ export default class Chart extends React.Component {
         );
     }
 
+    // Re-render chart when options change.
     componentDidUpdate() {
-        // Re-render chart when risk profile changes.
         this.chart = new Highcharts[this.props.type || "Chart"](
             this.props.container, 
             this.props.options
@@ -33,7 +33,7 @@ export default class Chart extends React.Component {
     // Create the div which the chart will be rendered to.
     render() {
         return (
-            <div id={this.props.container} ></div>
+            <div id={this.props.container}></div>
         );
     }
 }

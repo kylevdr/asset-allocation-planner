@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Chart from './Chart';
 import text from '../text/text';
+import colors from '../styles/chartColors';
 
 class DonutChart extends React.Component {
     render() {
@@ -11,12 +12,7 @@ class DonutChart extends React.Component {
                 type: 'pie',
                 backgroundColor: '#F5F5F5'
             },
-            // Blue and grey color scheme
-            // colors: ['#045177', '#0b86c3', '#58ABD3', '#5C5C61', '#8F8F93'],
-            // Icy color scheme
-            // colors: ['#022B3A', '#1F7A8C', '#BFDBF7', '#E1E5F2', '#FFFFFF'],
-            // Bright color scheme
-            colors: ['#D11149', '#F17105', '#E6C229', '#6610F2', '#1A8FE3'],
+            colors: colors.default,
             title: {
                 text: text.chartTitle
             },
