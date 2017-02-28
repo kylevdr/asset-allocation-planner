@@ -1,6 +1,6 @@
 # Asset Allocation Planner
 Web application that calculates and charts ideal allocation of assets based on risk profile.  
-Video demonstration is available here: https://youtu.be/gql6ChWvhLY.
+Video demonstration is available here: https://youtu.be/gB9Mc_mGJu4.
 
 ### Dependencies
 - React
@@ -18,4 +18,4 @@ Video demonstration is available here: https://youtu.be/gql6ChWvhLY.
 6. Serve the files by running `npm run serve` in your terminal. If the page does not open automatically, visit http://localhost:8080/.
 
 ### Comments
-I learned several new tools for this project, Highcharts and react-bootstrap-slider. The most time-consuming parts of the project were learning to use these tools, doing the background research for the project, and setting up the boilerplate.
+I learned several new tools for this project, Highcharts and react-bootstrap-slider. The most time-consuming part of the project was developing the transaction planning functionality.
