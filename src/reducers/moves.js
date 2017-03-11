@@ -18,53 +18,48 @@ export default function userInfo(state = initialState, action) {
         bonds: 0,
         cash: 0
       };
-      let deltas = {};
+      let deltas = [];
       let moves = [];
-
-      // Define helper functions
-      function getLargestKey(object) {
-        let largestValue = 0;
-        let largestKey = '';
-        for (let key in object) {
-          if (object[key] > largestValue) {
-            largestValue = object[key];
-            largestKey = key;
-          }
-        }
-        return { key: largestKey, value: largestValue};
-      }
-
-      function getSmallestKey(object) {
-        let smallestValue = 0;
-        let smallestKey = '';
-        for (let key in object) {
-          if (object[key] < smallestValue) {
-            smallestValue = object[key];
-            smallestKey = key;
-          }
-        }
-        return { key: smallestKey, value: smallestValue };
-      }
 
       // Calculate ideals and deltas
       for (let key in ideals) {
         ideals[key] = userInfo.total * assetAllocation[key] / 100;
-        deltas[key] = userInfo[key] - ideals[key];
+        deltas.push({
+          key: key,
+          value: userInfo[key] - ideals[key]
+        });
       }
 
-      // Determine fewest moves
-      while (getSmallestKey(deltas).value < -.001) {
-        let moveFrom = getLargestKey(deltas).key;
-        let moveTo = getSmallestKey(deltas).key;
+      // Sort deltas from least to greatest value
+      deltas.sort((a, b) => a.value - b.value);
+
+      // Determine fewest transactions
+      while (deltas[0].value < -.001) {
+        /*
+         * Transaction will move money from category with most positive delta
+         * to category with most negative delta
+         */
+        let moveFrom = deltas[deltas.length - 1].key;
+        let moveTo = deltas[0].key;
+        /*
+         * If "move from" category needs to give more money than "move to" category needs
+         * to receive, move amount will be the value that "move to" category needs to receive.
+         * Else if "move to" category needs to receive more money than "move from" category
+         * has to give, move amount will be the value that "move from" category has to give.
+         */
         let moveAmount = 0;
-        if (deltas[moveTo] + deltas[moveFrom] > 0) {
-          moveAmount = 0 - deltas[moveTo];
+        if (deltas[0].value + deltas[deltas.length - 1].value > 0) {
+          moveAmount = 0 - deltas[0].value;
         } else {
-          moveAmount = deltas[moveFrom];
+          moveAmount = deltas[deltas.length - 1].value;
         }
+        // Add text for the transaction to the moves array to be displayed in NextSteps component
         moves.push(`${text.move} ${text.currency}${moveAmount.toFixed(2)} ${text.from} ${text[moveFrom]} ${text.to} ${text[moveTo]}.`);
-        deltas[moveFrom] -= moveAmount;
-        deltas[moveTo] += moveAmount;
+        // Simulate the transaction
+        deltas[deltas.length - 1].value -= moveAmount;
+        deltas[0].value += moveAmount;
+        // Re-sort deltas with new values
+        deltas.sort((a, b) => a.value - b.value);
       }
 
       // Return new state
