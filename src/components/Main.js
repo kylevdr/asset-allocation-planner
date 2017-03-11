@@ -18,7 +18,7 @@ class Main extends React.Component {
 					<br />
 					<div className="row">
 						<div className="col-xs-12 col-md-6">
-							<DonutChart />
+							<DonutChart chartId="asset-allocation-chart" />
 						</div>
 						<div className="col-xs-12 col-md-6">
 							<AllocationForm />

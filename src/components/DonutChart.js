@@ -19,12 +19,13 @@ class DonutChart extends React.Component {
             plotOptions: {
                 pie: {
                     borderColor: '#000000',
-                    innerSize: '60%'
+                    innerSize: '50%'
                 }
             },
             tooltip: {
                 valueSuffix: '%'
             },
+            credits: false,
             series: [{
                 name: text.seriesName,
                 data: [
@@ -33,10 +34,15 @@ class DonutChart extends React.Component {
                     [text.international, this.props.assetAllocation.international],
                     [text.bonds, this.props.assetAllocation.bonds],
                     [text.cash, this.props.assetAllocation.cash]
-                ]
+                ],
+                dataLabels: {
+                    enabled: false,
+                    distance: -50
+                },
+                showInLegend: true
             }]
         };
-        return <Chart container="asset-allocation-chart" options={options} />
+        return <Chart container={this.props.chartId} options={options} />
     }
 }
 

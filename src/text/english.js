@@ -9,7 +9,7 @@ module.exports = {
 	international: "International Stocks",
 	bonds: "Bonds",
 	cash: "Cash",
-	formTitle: "Current Asset Allocation (Dollars)",
+	formTitle: "Current Asset Allocation",
 	currency: "$",
 	conservative: "Conservative",
 	aggressive: "Aggressive",
