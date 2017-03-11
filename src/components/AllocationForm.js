@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import * as userInfoActions from '../actions/userInfo';
 import text from '../text/text';
+import CurrencyInput from './CurrencyInput';
 
 class AllocationForm extends React.Component {
 	
@@ -17,26 +18,11 @@ class AllocationForm extends React.Component {
 			<div>
 				<h4 className="text-center form-title">{text.formTitle}</h4>
 				<form>
-					<div className="form-group">
-						<label htmlFor="largeCap">{text.largeCap}</label>
-						<input onChange={this.handleFormChange.bind(this)} type="number" className="form-control" name="largeCap" id="largeCap" placeholder={0} />
-					</div>
-					<div className="form-group">
-						<label htmlFor="midSmallCap">{text.midSmallCap}</label>
-						<input onChange={this.handleFormChange.bind(this)} type="number" className="form-control" name="midSmallCap" id="midSmallCap" placeholder={0} />
-					</div>
-					<div className="form-group">
-						<label htmlFor="international">{text.international}</label>
-						<input onChange={this.handleFormChange.bind(this)} type="number" className="form-control" name="international" id="international" placeholder={0} />
-					</div>
-					<div className="form-group">
-						<label htmlFor="bonds">{text.bonds}</label>
-						<input onChange={this.handleFormChange.bind(this)} type="number" className="form-control" name="bonds" id="bonds" placeholder={0} />
-					</div>
-					<div className="form-group">
-						<label htmlFor="cash">{text.cash}</label>
-						<input onChange={this.handleFormChange.bind(this)} type="number" className="form-control" name="cash" id="cash" placeholder={0} />
-					</div>
+					<CurrencyInput category="largeCap" placeholderText={text.largeCap} onChangeFunc={this.handleFormChange.bind(this)} />
+					<CurrencyInput category="midSmallCap" placeholderText={text.midSmallCap} onChangeFunc={this.handleFormChange.bind(this)} />
+					<CurrencyInput category="international" placeholderText={text.international} onChangeFunc={this.handleFormChange.bind(this)} />
+					<CurrencyInput category="bonds" placeholderText={text.bonds} onChangeFunc={this.handleFormChange.bind(this)} />
+					<CurrencyInput category="cash" placeholderText={text.cash} onChangeFunc={this.handleFormChange.bind(this)} />
 				</form>
 			</div>
 		);

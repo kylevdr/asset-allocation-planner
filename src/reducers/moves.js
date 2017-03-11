@@ -14,7 +14,7 @@ export default function userInfo(state = initialState, action) {
       let ideals = {
         largeCap: 0,
         midSmallCap: 0,
-        international : 0,
+        international: 0,
         bonds: 0,
         cash: 0
       };
